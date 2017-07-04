@@ -4,14 +4,6 @@
     "name": "순간이동기",
     "description": "BOJ Move Tool",
     "version": "1.0",
-    "commands": {
-        "enter" : {
-            "suggested_key": {
-             "default": "Enter"
-        },
-        "description": "move"
-        }
-    },
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "popup.html"

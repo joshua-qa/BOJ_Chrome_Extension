@@ -1,15 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     var link = document.getElementById('moveBtn');
-    // onClick's logic below:
     link.addEventListener('click', function() {
-        var text = "https://www.acmicpc.net/problem/" + document.getElementById("problem_id").value;
+        var problemId = document.getElementById("problem_id").value;
+        if(problemId < 1000) {
+            problemId = 1000;
+        }
+        var text = "https://www.acmicpc.net/problem/" + problemId;
         chrome.tabs.update({url: text});
         window.close();
     });
-});
-
-chrome.commands.onCommand.addListener(function (command) {
-    if (command === "enter") {
-        alert("save");
-    }
 });
